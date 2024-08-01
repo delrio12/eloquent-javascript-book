@@ -33,3 +33,29 @@ console.log(isEven(prompt("Check if this number is Even or Odd:")));
 
 
 //----------------------Bean Counting--------------------//
+console.log("Write a function called countBs that takes a string as its only argument and returns a number that indicates how many uppercase \"B\" characters there are in the string");
+
+function countBs(str) {
+    let counter = 0;
+    for(i=0 ; i<=str.length ; i++ ) {
+        if(str[i] === "B") {
+            counter++;
+        }
+    }
+  console.log(counter);  
+}
+countBs(prompt("Please add a word to count number of \'B\'s in it"));
+
+console.log("Now write a function called countChar that behaves like countBs, except that it takes a second argument that indicates the char that is to be counted.");
+
+function countChar(str, charToCount) {
+
+    let counter = 0;
+    for(i=0 ; i<=str.length ; i++ ) {
+        if(str[i] === charToCount) {
+            counter++;
+        }
+    }
+  console.log(counter);  
+}
+countChar(prompt("Please add a word to check:"), prompt("Which char would you like to look for?"));
