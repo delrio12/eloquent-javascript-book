@@ -1,9 +1,15 @@
 //------------------------The Sum of a Range---------------------------//
 function range(start,end) {
-    for()
+
 }
 
-function sum()
+function sum() {
+
+}
+
+function range2() {
+
+}
 //---------------------------Your Own Loop-----------------------------//
 
 //----------------------------Everything------------------------------//
