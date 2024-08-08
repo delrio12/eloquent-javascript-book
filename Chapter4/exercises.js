@@ -23,8 +23,13 @@ function sum(arrayOfNums) {
 console.log(sum(range(1,10)));
 
 //---3---//
-function range2() {
-
+function range2(start,end,step) {
+    let setOfNums=[];
+    for(let i=start;i<=end; i++)
+    {
+        setOfNums.push(i);
+    }
+    return setOfNums;
 }
 
 //---------------------------Your Own Loop-----------------------------//
