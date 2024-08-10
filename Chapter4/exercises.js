@@ -48,8 +48,28 @@ function range2(start,end,step) {
 console.log(range2(1,10,2));
 console.log(range2(5,2));
 
-//---------------------------Your Own Loop-----------------------------//
+//------------------------Reversing an Array--------------------------//
+//---1---//
+function reverseArray(array1) {
+    let array2 = [];
+    for(i=array1.length-1 ; i>=0 ; i--) {
+        array2.push(array1[i]);
+    }
+    return array2;
+}
+console.log(reverseArray([1,2,32,4,5,6,7]));
 
-//----------------------------Everything------------------------------//
+//---2---//
+function reverseArrayInPlace(array1) {
+    for(i=array1.length-1 ; i>=0 ; i--) {
+        array1.push(array1[i]);
+    }
+    for(i=0 ; i<array1.length ; i++) {
+            array1.shift();
+        }
+    return array1;
+}
+console.log(reverseArrayInPlace([432,2,32,4,5,6,7]));
+//------------------------------A List--------------------------------//
 
-//----------------------Dominant Writing Direction--------------------//
+//---------------------------Deep Comparison--------------------------//
