@@ -72,5 +72,14 @@ function reverseArrayInPlace(array1) {
 console.log(reverseArrayInPlace([432,2,32,4,5,6,7]));
 //------------------------------A List--------------------------------//
 
+function arrayToList(array) {
+
+}
+arrayToList([1,2,3]);
+
+function listToArray(list) {
+
+}
+listToArray()
 
 //---------------------------Deep Comparison--------------------------//
