@@ -71,11 +71,18 @@ function reverseArrayInPlace(array1) {
 }
 console.log(reverseArrayInPlace([432,2,32,4,5,6,7]));
 //------------------------------A List--------------------------------//
-
+var array1 = [10, 20, 30];
 function arrayToList(array) {
+    var list = {};
 
+ for (var i = 0; i < array.length; i++) {
+    list.value = array.splice(0, 1)[0];
+    list.rest = (array.length > 0) ? arrayToList(array) : null;
+ }
+
+ return list;
 }
-arrayToList([1,2,3]);
+console.log(arrayToList(arr1));
 
 function listToArray(list) {
 
