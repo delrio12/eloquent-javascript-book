@@ -114,13 +114,13 @@ function listToArray(list) {
 console.log('3.2');
 console.log(listToArray(list1));
 
-
+//---3---//
 function prepend(value, list) {
     return {value, rest: list};
 }
 console.log(prepend('ok', list1));
 
-
+//---4---//
 function nth(list, n) {
     if (!list) return undefined;
     else if (n == 0) return list.value;
