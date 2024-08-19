@@ -26,6 +26,42 @@
         </p>
         <h2 class='task-name'>4.2 Reversing an array</h2>
         <p class='task-description'>"Arrays have a method reverse, which changes the array by inverting the order in which its elements appear. For this exercise, write two functions, reverseArray and reverseArrayInPlace. The first, reverseArray, takes an array as argument and produces a new array that has the same elements in the inverse order. The second, reverseArrayInPlace, does what the reverse method does: it modifies the array given as argument in order to reverse its elements. Neither may use the standard reverse method. <br>Thinking back to the notes about side effects and pure functions in the previous chapter, which variant do you expect to be useful in more situations? Which one is more efficient?"</p>
+        <h2 class='task-name'>4.3 A List</h2>
+        <p class='task-description'>"As generic blobs of values, objects can be used to build all sorts of data structures. A common data structure is the list (not to be confused with arrays). A list is a nested set of objects, with the first object holding a reference to the second, the second to the third, and so on:"</p>
+        <pre>
+            let list = {
+                value: 1,
+                rest: {
+                    value: 2,
+                    rest: {
+                    value: 3,
+                    rest: null
+                    }
+                }
+                };
+        </pre>
+        <p>The resulting objects form a chain, as shown in the following diagram:
+        </p>
+        <img src="https://eloquentjavascript.net/img/linked-list.svg">
+        <p>A nice thing about lists is that they can share parts of their structure. For example, if I create two new values {value: 0, rest: list} and {value: -1, rest: list} (with list referring to the binding defined earlier), they are both independent lists, but they share the structure that makes up their last three elements. The original list is also still a valid three-element list.
+        </p>
+        <p>Write a function arrayToList that builds up a list structure like the one shown when given [1, 2, 3] as argument. Also write a listToArray function that produces an array from a list. Add the helper functions prepend, which takes an element and a list and creates a new list that adds the element to the front of the input list, and nth, which takes a list and a number and returns the element at the given position in the list (with zero referring to the first element) or undefined when there is no such element.
+        <br><br>
+        If you haven’t already, also write a recursive version of nth.
+        </p>
+        <h2 class='task-name'>4.4 Deep Comparison</h2>
+        <p class='task-description'>The == operator compares objects by identity, but sometimes you’d prefer to compare the values of their actual properties.
+        <br><br>
+        Write a function deepEqual that takes two values and returns true only if they are the same value or are objects with the same properties, where the values of the properties are equal when compared with a recursive call to deepEqual.
+        <br><br>
+        To find out whether values should be compared directly (using the === operator for that) or have their properties compared, you can use the typeof operator. If it produces "object" for both values, you should do a deep comparison. But you have to take one silly exception into account: because of a historical accident, typeof null also produces "object".
+        <br><br>
+        The Object.keys function will be useful when you need to go over the properties of objects to compare them.</p>
+        <br><br><br>
+
+
+
+
         <p>Source: "Eloquent JavaScript: A Modern Introduction to Programming" by Marijn Haverbeke</p>
         <a href="http://eloquentjavascript.net/">Read the source book</a>
     </div>
