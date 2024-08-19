@@ -128,3 +128,30 @@ function nth(list, n) {
 }
 console.log(nth(arrayToList([10, 20, 30]), 1));
 //---------------------------Deep Comparison--------------------------//
+
+function deepEqual(value1, value2) {
+    var result = false;
+    if (value1 === value2) {
+      return true;
+    } else if (value1 === null || value2 === null) {
+      return false;
+    } else {
+      if (typeof(value1) === "object" || typeof(value2) === "object") {
+        for (var key in value1) {
+          if (JSON.stringify(value1[key]) === JSON.stringify(value2[key])) {
+            result = true;
+          } else {
+            return false;
+          }
+        };
+        //return result after all the values in object are compared.
+        return result;
+      }
+    }
+  }
+let obj = {here: {is: "an"}, object: 2};
+let obj2= {here: {is: "the"}, object: 2};3
+
+console.log(deepEqual(obj, obj2));
+console.log(deepEqual(obj2, obj2));
+console.log(deepEqual(obj, {here: 21, object: 2}));
