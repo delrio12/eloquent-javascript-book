@@ -5,18 +5,14 @@ console.log(arrayOfArrays.reduce((accumulator, next) => accumulator.concat(next)
 
 
 //------------------------Your Own Loop--------------------------//
-//---1---//
+
 function loop(value, test, update, execute) {
     if (test(value)) {
       execute(value);
       return loop(update(value), test, update, execute);
     } // else stop
   }
-
-//---2---//
-
-
-//------------------------------Everything--------------------------------//
+//-----------------------------Everything--------------------------------//
 //---1---//
 
 
