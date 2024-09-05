@@ -13,15 +13,32 @@ function loop(value, test, update, execute) {
     } // else stop
   }
 //-----------------------------Everything--------------------------------//
-//---1---//
+function every(array, test) {
+  for (let element of array) {
+    if (test(element) === false) {
+      return false;
+    }
+  }
+  return true;
+}
 
+console.log(every([1, 3, 5], n => n < 10));
+//  true
+console.log(every([2, 4, 16], n => n < 10));
+//  false
+console.log(every([], n => n < 10));
+//  true
 
-//---2---//
+// every using array.some
+function every(array, test) {
+  return array.some(test);
+}
 
-
-//---3---//
-
-
-//---4---//
+console.log(every([1, 3, 5], n => n < 10));
+//  true
+console.log(every([2, 4, 16], n => n < 10));
+//  false
+console.log(every([], n => n < 10));
+//  true
 
 //---------------------------Dominant Writing Direction--------------------------//
