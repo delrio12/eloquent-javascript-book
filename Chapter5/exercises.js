@@ -86,10 +86,10 @@ function dominantDirection(text) {
 }
 
 console.log(dominantDirection("Hello!"));
-// → ltr
+// ltr
 console.log(dominantDirection("Hey, مساء الخير"));
-// → rtl
+// rtl
 console.log(dominantDirection(""));
-// → no dominant direction found
+// no dominant direction found
 console.log(dominantDirection("Heyخير"));
-// → no dominant direction found
+// no dominant direction found
